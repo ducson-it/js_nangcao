@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <h1>Order list</h1>
+    <div class="form grid grid-cols-2 gap-4">
+        <form action="" class="border border-dashed border-red-300 p-5" id="form">
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Tên món ăn</label>
+                <input class="border outline-none" id="name" type="text">
+                <div class="error text-red-500 text-sm"></div>
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Số lượng</label>
+                <input class="border outline-none" id="amount" type="number">
+                <div class="error text-red-500 text-sm"></div>
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Giá</label>
+                <input class="border outline-none" id="price" type="number">
+                <div class="error text-red-500 text-sm"></div>
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Loại đồ ăn</label>
+                <select name="" id="type" class="outline-none border">
+                    <option value="">Tráng miệng</option>
+                    <option value="">Đồ ăn nhẹ</option>
+                    <option value="">Đồ uống</option>
+                    <option value="">Đồ nướng</option>
+                </select>
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Ảnh</label>
+                <input type="file" id="image">
+            </div>
+            <div class="flex flex-col mb-4">
+                <label class="font-bold" for="">Mô tả</label>
+                <textarea class="border outline-none" name="" id="description" cols="30" rows="5"></textarea>
+                <div class="error text-red-500 text-sm"></div>
+            </div>
+            <button class="bg-red-300 p-2 font-bold text-white" type="submit">Tạo mới</button>
+        </form>
+        <div class="border border-dashed border-blue-300">
+            <table class="border border-dashed border-blue-300" id="customers">
+                <thead>
+                    <td>STT</td>
+                    <td>Tên món ăn</td>
+                    <td>Số lượng</td>
+                    <td>Loại đồ ăn</td>
+                    <td>Hết hàng</td>
+                </thead>
+            </table>
+        </div>
+    </div>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>
